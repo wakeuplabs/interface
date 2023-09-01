@@ -212,7 +212,7 @@ export const marketsData: {
   //     V3_MIGRATOR: AaveV2EthereumAMM.MIGRATION_HELPER,
   //   },
   // },
-  
+
   // [CustomMarket.proto_avalanche]: {
   //   marketTitle: 'Avalanche',
   //   chainId: ChainId.avalanche,
@@ -524,8 +524,7 @@ export const marketsData: {
   //     DEBT_SWITCH_ADAPTER: AaveV3Optimism.DEBT_SWAP_ADAPTER,
   //   },
   // },
-  
- 
+
   // [CustomMarket.proto_goerli]: {
   //   marketTitle: 'Ethereum Görli',
   //   chainId: ChainId.goerli,
@@ -585,9 +584,6 @@ export const marketsData: {
   //   },
   // },
 
-
-
-
   // [CustomMarket.proto_polygon]: {
   //   marketTitle: 'Polygon',
   //   chainId: ChainId.polygon,
@@ -644,13 +640,13 @@ export const marketsData: {
     },
     //  subgraphUrl: 'https://api.thegraph.com/subgraphs/name/aave/protocol-v3-mumbai',  needs re-deployment
     addresses: {
-      LENDING_POOL_ADDRESS_PROVIDER: AaveV3Mumbai.POOL_ADDRESSES_PROVIDER,
-      LENDING_POOL: AaveV3Mumbai.POOL,
-      WETH_GATEWAY: AaveV3Mumbai.WETH_GATEWAY,
-      FAUCET: AaveV3Mumbai.FAUCET,
-      WALLET_BALANCE_PROVIDER: AaveV3Mumbai.WALLET_BALANCE_PROVIDER,
-      UI_POOL_DATA_PROVIDER: AaveV3Mumbai.UI_POOL_DATA_PROVIDER,
-      UI_INCENTIVE_DATA_PROVIDER: AaveV3Mumbai.UI_INCENTIVE_DATA_PROVIDER,
+      LENDING_POOL_ADDRESS_PROVIDER: '0x554cB02f1CafED186408eeCC1f2a27CfB40160D9', // AaveV3Mumbai.POOL_ADDRESSES_PROVIDER,
+      LENDING_POOL: '0xc13d4a61a10Bf989fc789005cd11621E81f515e1', // AaveV3Mumbai.POOL,
+      WETH_GATEWAY: '0xf103469EF9C58A8C4FCfcc4D5c5155BCcbf92bCb', // AaveV3Mumbai.WETH_GATEWAY,
+      FAUCET: '0x717b5f828565E8891Df722C223e8c74ECBA5Fe89', // AaveV3Mumbai.FAUCET,
+      WALLET_BALANCE_PROVIDER: '0xf03FCf76437549Bf4F19bF6ac19E89c16C31b1D4', // AaveV3Mumbai.WALLET_BALANCE_PROVIDER,
+      UI_POOL_DATA_PROVIDER: '0x340a0BC4bd9984275bA6Fd72F352F42cAb7bB636', // AaveV3Mumbai.UI_POOL_DATA_PROVIDER,
+      UI_INCENTIVE_DATA_PROVIDER: '0xf2aCE49052e197B67FEf92FdC798431eFfeae6c1', // AaveV3Mumbai.UI_INCENTIVE_DATA_PROVIDER,
     },
     v3: true,
   },
