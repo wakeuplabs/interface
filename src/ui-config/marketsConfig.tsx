@@ -101,6 +101,7 @@ export enum CustomMarket {
   proto_celo_v3 = 'proto_celo_v3',
   proto_soneium_v3 = 'proto_soneium_v3',
   proto_aptos_v3 = 'proto_aptos_v3',
+  proto_alpen_testnet_v3 = 'proto_alpen_testnet_v3',
   // v2
   proto_mainnet = 'proto_mainnet',
   proto_avalanche = 'proto_avalanche',
@@ -779,6 +780,29 @@ export const marketsData: {
       COLLECTOR: AaveV3EthereumEtherFi.COLLECTOR,
       WITHDRAW_SWITCH_ADAPTER: AaveV3EthereumEtherFi.WITHDRAW_SWAP_ADAPTER,
       DEBT_SWITCH_ADAPTER: AaveV3EthereumEtherFi.DEBT_SWAP_ADAPTER,
+    },
+  },
+
+  [CustomMarket.proto_alpen_testnet_v3]: {
+    marketTitle: 'Alpen Testnet',
+    market: CustomMarket.proto_alpen_testnet_v3,
+    v3: true,
+    logo: '/icons/markets/alpen.png',
+    chainId: ChainId.sepolia,
+    enabledFeatures: {
+      switch: true,
+      faucet: true,
+    },
+    // todo: change addresses with deploy
+    addresses: {
+      LENDING_POOL_ADDRESS_PROVIDER: AaveV3Sepolia.POOL_ADDRESSES_PROVIDER,
+      LENDING_POOL: AaveV3Sepolia.POOL,
+      WETH_GATEWAY: AaveV3Sepolia.WETH_GATEWAY,
+      FAUCET: AaveV3Sepolia.FAUCET,
+      WALLET_BALANCE_PROVIDER: AaveV3Sepolia.WALLET_BALANCE_PROVIDER,
+      UI_POOL_DATA_PROVIDER: AaveV3Sepolia.UI_POOL_DATA_PROVIDER,
+      UI_INCENTIVE_DATA_PROVIDER: AaveV3Sepolia.UI_INCENTIVE_DATA_PROVIDER,
+      GHO_TOKEN_ADDRESS: '0xc4bF5CbDaBE595361438F8c6a187bDc330539c60',
     },
   },
 } as const;
