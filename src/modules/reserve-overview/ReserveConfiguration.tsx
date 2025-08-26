@@ -35,6 +35,9 @@ const BROKEN_ASSETS = [
   // ampl https://governance.aave.com/t/arc-fix-ui-bugs-in-reserve-overview-for-ampl/5885/5?u=sakulstra
   AaveV2Ethereum.ASSETS.AMPL.UNDERLYING.toLowerCase(),
   AaveV2Ethereum.ASSETS.FEI.UNDERLYING.toLowerCase(),
+  '0x41e7c7aa41acc0e571a677bbaa016171f848adec',
+  '0x4eb8ade4cebb4439105425be0fa23a414f920926',
+  '0x76c8ca7e7b56d2f6d676733f5f4e83ac7ee00683',
 ];
 
 type ReserveConfigurationProps = {

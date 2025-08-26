@@ -13024,6 +13024,24 @@ export const TOKEN_LIST: TokenList = {
       logoURI:
         'https://assets.coingecko.com/coins/images/52937/standard/token-beets-staked-sonic.png?1734712659',
     },
+    {
+      name: 'Wrapped BTC',
+      address: '0xfe36c328Eb2e8Eb96Fa854756892a6CabF8B2e6b',
+      symbol: 'WBTC',
+      decimals: 18,
+      chainId: 2892,
+      logoURI:
+        'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png',
+    },
+    {
+      name: 'Bitcoin Dollar',
+      address: '0x9787aCeb37C7DE9bb97076c05F81933f5BA6C498',
+      symbol: 'BTD',
+      decimals: 18,
+      chainId: 2892,
+      logoURI:
+        'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png',
+    },
   ],
 };
 
