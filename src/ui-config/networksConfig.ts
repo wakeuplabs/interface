@@ -167,6 +167,38 @@ export const testnetConfig: Record<string, BaseNetworkConfig> = {
     networkLogoPath: '/icons/networks/scroll.svg',
     wagmiChain: scrollSepolia,
   },
+  [ChainId.alpen_testnet]: {
+    name: 'Alpen Testnet',
+    isTestnet: true,
+    publicJsonRPCUrl: ['https://rpc.testnet.alpenlabs.io'],
+    baseAssetSymbol: 'sBTC',
+    wrappedBaseAssetSymbol: 'WBTC',
+    baseAssetDecimals: 18,
+    explorerLink: 'https://explorer.testnet.alpenlabs.io/',
+    networkLogoPath: '/icons/networks/alpen.png',
+    bridge: {
+      icon: '/icons/networks/alpen.png',
+      name: 'Alpen Bridge',
+      url: 'https://docs.alpenlabs.io/welcome/using-the-alpen-cli',
+    },
+    wagmiChain: defineChain({
+      id: 2_892,
+      name: 'Alpen Testnet',
+      nativeCurrency: { name: 'Signet Bitcoin', symbol: 'sBTC', decimals: 18 },
+      rpcUrls: {
+        default: {
+          http: ['https://rpc.testnet.alpenlabs.io'],
+        },
+      },
+      blockExplorers: {
+        default: {
+          name: 'Blockscout',
+          url: 'https://explorer.testnet.alpenlabs.io/',
+          apiUrl: 'https://explorer.testnet.alpenlabs.io/api',
+        },
+      },
+    }),
+  },
 };
 
 export const prodNetworkConfig: Record<string, BaseNetworkConfig> = {
@@ -426,38 +458,6 @@ export const prodNetworkConfig: Record<string, BaseNetworkConfig> = {
       url: 'https://soneium.org/en/bridges/',
     },
     wagmiChain: soneium,
-  },
-  [ChainId.alpen_testnet]: {
-    name: 'Alpen Testnet',
-    isTestnet: true,
-    publicJsonRPCUrl: ['https://rpc.testnet.alpenlabs.io'],
-    baseAssetSymbol: 'sBTC',
-    wrappedBaseAssetSymbol: 'WBTC',
-    baseAssetDecimals: 18,
-    explorerLink: 'https://explorer.testnet.alpenlabs.io/',
-    networkLogoPath: '/icons/networks/alpen.png',
-    bridge: {
-      icon: '/icons/networks/alpen.png',
-      name: 'Alpen Bridge',
-      url: 'https://docs.alpenlabs.io/welcome/using-the-alpen-cli',
-    },
-    wagmiChain: defineChain({
-      id: 2_892,
-      name: 'Alpen Testnet',
-      nativeCurrency: { name: 'Signet Bitcoin', symbol: 'sBTC', decimals: 18 },
-      rpcUrls: {
-        default: {
-          http: ['https://rpc.testnet.alpenlabs.io'],
-        },
-      },
-      blockExplorers: {
-        default: {
-          name: 'Blockscout',
-          url: 'https://explorer.testnet.alpenlabs.io/',
-          apiUrl: 'https://explorer.testnet.alpenlabs.io/api',
-        },
-      },
-    }),
   },
 };
 
