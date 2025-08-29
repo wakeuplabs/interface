@@ -1,5 +1,6 @@
 import { ProtocolAction } from '@aave/contract-helpers';
 import { Trans } from '@lingui/macro';
+import { Box, Button } from '@mui/material';
 import { useAppDataContext } from 'src/hooks/app-data-provider/useAppDataProvider';
 import { useAssetCaps } from 'src/hooks/useAssetCaps';
 import { useRootStore } from 'src/store/root';
@@ -10,6 +11,7 @@ import { useShallow } from 'zustand/shallow';
 import { IncentivesCard } from '../../../../components/incentives/IncentivesCard';
 import { Row } from '../../../../components/primitives/Row';
 import { useModalContext } from '../../../../hooks/useModal';
+import { isFeatureEnabled } from '../../../../utils/marketsAndNetworksConfig';
 import { ListItemUsedAsCollateral } from '../ListItemUsedAsCollateral';
 import { ListMobileItemWrapper } from '../ListMobileItemWrapper';
 import { ListValueRow } from '../ListValueRow';
@@ -22,13 +24,24 @@ export const SuppliedPositionsListMobileItem = ({
   underlyingAsset,
 }: DashboardReserve) => {
   const { user } = useAppDataContext();
-  const [currentMarket] = useRootStore(
+  const [currentMarketData, currentMarket] = useRootStore(
     useShallow((state) => [state.currentMarketData, state.currentMarket])
   );
-  const { openCollateralChange } = useModalContext();
+  const { openSupply, openSwap, openWithdraw, openCollateralChange } = useModalContext();
   const { debtCeiling } = useAssetCaps();
-  const { symbol, iconSymbol, name, supplyAPY, isIsolated, aIncentivesData, aTokenAddress } =
-    reserve;
+  const isSwapButton = isFeatureEnabled.liquiditySwap(currentMarketData);
+  const {
+    symbol,
+    iconSymbol,
+    name,
+    supplyAPY,
+    isIsolated,
+    aIncentivesData,
+    aTokenAddress,
+    isFrozen,
+    isActive,
+    isPaused,
+  } = reserve;
 
   const canBeEnabledAsCollateral = user
     ? !debtCeiling.isMaxed &&
@@ -37,6 +50,10 @@ export const SuppliedPositionsListMobileItem = ({
         user.isolatedReserve?.underlyingAsset === reserve.underlyingAsset ||
         (reserve.isIsolated && user.totalCollateralMarketReferenceCurrency === '0'))
     : false;
+
+  const disableSwap = !isActive || isPaused || reserve.symbol == 'stETH';
+  const disableWithdraw = !isActive || isPaused;
+  const disableSupply = !isActive || isFrozen || isPaused;
 
   return (
     <ListMobileItemWrapper

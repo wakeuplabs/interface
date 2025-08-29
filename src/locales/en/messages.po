@@ -373,6 +373,7 @@ msgstr "Sign to continue"
 msgid "Total amount staked"
 msgstr "Total amount staked"
 
+#: src/components/transactions/Bridge/BridgeModalContent.tsx
 #: src/modules/history/HistoryWrapper.tsx
 #: src/modules/history/HistoryWrapperMobile.tsx
 msgid "Transactions"
@@ -794,6 +795,10 @@ msgstr "Migrate your assets"
 msgid "AAVE and ABPT holders (Ethereum network only) can stake their assets in the Safety Module to add more security to the protocol and earn Safety Incentives. In the case of a shortfall event, your stake can be slashed to cover the deficit, providing an additional layer of protection for the protocol."
 msgstr "AAVE and ABPT holders (Ethereum network only) can stake their assets in the Safety Module to add more security to the protocol and earn Safety Incentives. In the case of a shortfall event, your stake can be slashed to cover the deficit, providing an additional layer of protection for the protocol."
 
+#: src/layouts/components/NavItems.tsx
+msgid "Savings"
+msgstr "Savings"
+
 #: src/components/transactions/Emode/EmodeModalContent.tsx
 #: src/modules/dashboard/DashboardEModeButton.tsx
 msgid "Asset category"
@@ -1098,6 +1103,7 @@ msgstr "Unstake window"
 msgid "Reload"
 msgstr "Reload"
 
+#: src/layouts/components/NavItems.tsx
 #: src/modules/reserve-overview/Gho/SavingsGho.tsx
 #: src/modules/reserve-overview/Gho/SavingsGho.tsx
 #: src/modules/sGho/SGhoDepositPanel.tsx
@@ -1321,6 +1327,7 @@ msgid "Merkl rewards are claimed through the"
 msgstr "Merkl rewards are claimed through the"
 
 #: src/components/transactions/Stake/StakeActions.tsx
+#: src/layouts/components/NavItems.tsx
 #: src/layouts/components/StakingMenu.tsx
 #: src/modules/umbrella/UmbrellaActions.tsx
 #: src/modules/umbrella/UmbrellaHeader.tsx
@@ -1551,6 +1558,7 @@ msgstr "Protocol APY"
 #: src/components/transactions/Withdraw/WithdrawModal.tsx
 #: src/components/transactions/Withdraw/WithdrawTypeSelector.tsx
 #: src/modules/dashboard/lists/SuppliedPositionsList/SuppliedPositionsListItem.tsx
+#: src/modules/dashboard/lists/SuppliedPositionsList/SuppliedPositionsListMobileItem.tsx
 #: src/modules/history/actions/ActionDetails.tsx
 #: src/modules/history/HistoryFilterMenu.tsx
 #: src/modules/reserve-overview/Gho/SavingsGho.tsx
@@ -2239,6 +2247,7 @@ msgstr "supply"
 #: pages/dashboard.page.tsx
 #: src/components/transactions/Supply/SupplyModal.tsx
 #: src/modules/dashboard/lists/SuppliedPositionsList/SuppliedPositionsListItem.tsx
+#: src/modules/dashboard/lists/SuppliedPositionsList/SuppliedPositionsListMobileItem.tsx
 #: src/modules/dashboard/lists/SupplyAssetsList/SupplyAssetsListItem.tsx
 #: src/modules/dashboard/lists/SupplyAssetsList/SupplyAssetsListItem.tsx
 #: src/modules/dashboard/lists/SupplyAssetsList/SupplyAssetsListMobileItem.tsx
@@ -2330,6 +2339,10 @@ msgstr "Available"
 msgid "You did not participate in this proposal"
 msgstr "You did not participate in this proposal"
 
+#: src/ui-config/menu-items/index.tsx
+msgid "Governance"
+msgstr "Governance"
+
 #: src/components/TitleWithSearchBar.tsx
 #: src/modules/history/HistoryWrapperMobile.tsx
 msgid "Cancel"
@@ -2408,6 +2421,10 @@ msgstr "Please connect a wallet to view your balance here."
 #: src/modules/umbrella/StakingApyItem.tsx
 msgid "Staking Rewards"
 msgstr "Staking Rewards"
+
+#: src/components/transactions/Bridge/BridgeModalContent.tsx
+msgid "Bridge GHO"
+msgstr "Bridge GHO"
 
 #: src/modules/history/HistoryWrapper.tsx
 #: src/modules/history/HistoryWrapperMobile.tsx
@@ -3486,6 +3503,7 @@ msgstr "Restaked"
 #: src/modules/dashboard/lists/BorrowedPositionsList/BorrowedPositionsListItem.tsx
 #: src/modules/dashboard/lists/BorrowedPositionsList/BorrowedPositionsListItem.tsx
 #: src/modules/dashboard/lists/SuppliedPositionsList/SuppliedPositionsListItem.tsx
+#: src/modules/dashboard/lists/SuppliedPositionsList/SuppliedPositionsListMobileItem.tsx
 #: src/modules/history/actions/ActionDetails.tsx
 #: src/modules/history/HistoryFilterMenu.tsx
 msgid "Swap"
