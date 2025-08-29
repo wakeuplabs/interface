@@ -8,8 +8,6 @@ import { useShallow } from 'zustand/shallow';
 
 import { Link, ROUTES } from '../../components/primitives/Link';
 import { navigation } from '../../ui-config/menu-items';
-import { MoreMenu } from '../MoreMenu';
-import { StakingMenu } from './StakingMenu';
 
 interface NavItemsProps {
   setOpen?: (value: boolean) => void;
