@@ -117,6 +117,37 @@ export const SuppliedPositionsListMobileItem = ({
           }
         />
       </Row>
+
+      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mt: 5 }}>
+        {isSwapButton ? (
+          <Button
+            disabled={disableSwap}
+            variant="contained"
+            onClick={() => openSwap(underlyingAsset)}
+            fullWidth
+          >
+            <Trans>Swap</Trans>
+          </Button>
+        ) : (
+          <Button
+            disabled={disableSupply}
+            variant="contained"
+            onClick={() => openSupply(underlyingAsset, currentMarket, reserve.name, 'dashboard')}
+            fullWidth
+          >
+            <Trans>Supply</Trans>
+          </Button>
+        )}
+        <Button
+          disabled={disableWithdraw}
+          variant="outlined"
+          onClick={() => openWithdraw(underlyingAsset, currentMarket, reserve.name, 'dashboard')}
+          sx={{ ml: 1.5 }}
+          fullWidth
+        >
+          <Trans>Withdraw</Trans>
+        </Button>
+      </Box>
     </ListMobileItemWrapper>
   );
 };

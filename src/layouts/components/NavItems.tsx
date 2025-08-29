@@ -95,6 +95,81 @@ export const NavItems = ({ setOpen }: NavItemsProps) => {
           </ListItem>
         ))}
 
+      <ListItem
+        sx={{
+          width: { xs: '100%', md: 'unset' },
+          mr: { xs: 0, md: 2 },
+        }}
+        disablePadding
+      >
+        {md ? (
+          <Typography
+            component={Link}
+            href={ROUTES.sGHO}
+            variant="h2"
+            color="#F1F1F3"
+            sx={{ width: '100%', p: 4 }}
+            onClick={() => handleClick('sGHO', true)}
+          >
+            <Trans>sGHO</Trans>
+          </Typography>
+        ) : (
+          <Button
+            component={Link}
+            onClick={() => handleClick('sGHO', false)}
+            href={ROUTES.sGHO}
+            sx={(theme) => ({
+              color: '#F1F1F3',
+              p: '6px 8px',
+              position: 'relative',
+              '.active&:after, &:hover&:after': {
+                transform: 'scaleX(1)',
+                transformOrigin: 'bottom left',
+              },
+              '&:after': {
+                content: "''",
+                position: 'absolute',
+                width: '100%',
+                transform: 'scaleX(0)',
+                height: '2px',
+                bottom: '-6px',
+                left: '0',
+                background: theme.palette.gradients.aaveGradient,
+                transformOrigin: 'bottom right',
+                transition: 'transform 0.25s ease-out',
+              },
+            })}
+          >
+            <Trans>Savings</Trans>
+          </Button>
+        )}
+      </ListItem>
+
+      <ListItem
+        sx={{
+          width: { xs: '100%', md: 'unset' },
+          mr: { xs: 0, md: 2 },
+        }}
+        disablePadding
+      >
+        {md ? (
+          <>
+            <Typography
+              component={Link}
+              href={ROUTES.staking}
+              variant="h2"
+              color="#F1F1F3"
+              sx={{ width: '100%', p: 4 }}
+              onClick={() => handleClick('Staking', true)}
+            >
+              <Trans>Staking</Trans>
+            </Typography>
+          </>
+        ) : (
+          <StakingMenu />
+        )}
+      </ListItem>
+
       {md && (
         <ListItem
           sx={{
@@ -115,6 +190,10 @@ export const NavItems = ({ setOpen }: NavItemsProps) => {
           </Typography>
         </ListItem>
       )}
+
+      <ListItem sx={{ display: { xs: 'none', md: 'flex' }, width: 'unset' }} disablePadding>
+        <MoreMenu />
+      </ListItem>
     </List>
   );
 };

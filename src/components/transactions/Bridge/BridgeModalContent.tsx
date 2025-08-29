@@ -308,6 +308,30 @@ export const BridgeModalContent = () => {
 
   return (
     <>
+      <Box display="flex" justifyContent="space-between" alignItems="center">
+        <Typography variant="h2">
+          <Trans>Bridge GHO</Trans>
+        </Typography>
+        {user && (
+          <Box
+            sx={{
+              right: '0px',
+            }}
+          >
+            <Button
+              component={Link}
+              href={ROUTES.bridge}
+              sx={{ mr: 8 }}
+              variant="surface"
+              size="small"
+              onClick={close}
+            >
+              <Trans>Transactions</Trans>
+            </Button>
+          </Box>
+        )}
+      </Box>
+
       <ChangeNetworkWarning
         autoSwitchOnMount={true}
         networkName={getNetworkConfig(sourceNetworkObj.chainId).name}
