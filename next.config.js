@@ -9,8 +9,6 @@ if (process.env.NEXT_PUBLIC_ENABLE_STAKING === 'true') pageExtensions.push('stak
 
 /** @type {import('next').NextConfig} */
 module.exports = withBundleAnalyzer({
-  assetPrefix: '/chain-check',
-  basePath: '/chain-check',
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,
